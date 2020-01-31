@@ -1,0 +1,5 @@
+.DS_Store
+__trash
+_old_*
+
+node_modules
