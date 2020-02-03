@@ -1,6 +1,6 @@
 {
   "name": "pakket",
-  "version": "0.0.0-alpha.4",
+  "version": "0.0.0",
   "description": "A bundler for Javascript code relying on import and export",
   "main": "index.js",
   "bin": {
@@ -30,7 +30,7 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.0"
+    "eslint-plugin-import": "^2.20.1"
   },
   "publishConfig": {
     "access": "public"

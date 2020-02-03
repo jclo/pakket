@@ -91,7 +91,8 @@ function _getNodeModulePath(rpath, name) {
 
   // Check if the path match a JS file:
   try {
-    stat = fs.accessSync(`${rpath}/node_modules/${name}.js`);
+    fs.accessSync(`${rpath}/node_modules/${name}.js`);
+    stat = true;
   } catch (error) {
     stat = null;
   }
@@ -99,7 +100,7 @@ function _getNodeModulePath(rpath, name) {
 
   // Check if package.json main isn't empty:
   try {
-    stat = fs.accessSync(`${rpath}/node_modules/${name}/package.json`);
+    fs.accessSync(`${rpath}/node_modules/${name}/package.json`);
   } catch (error) {
     throw new Error(`The file "${rpath}/node_modules/${name}/package.json" does NOT exist!`);
   }
@@ -122,7 +123,7 @@ function _getNodeModulePath(rpath, name) {
 
   // Check if index.js exists:
   try {
-    stat = fs.accessSync(`${rpath}/node_modules/${name}/index.js`);
+    fs.accessSync(`${rpath}/node_modules/${name}/index.js`);
   } catch (error) {
     throw new Error(`The file "${rpath}/node_modules/${name}/index.js" does NOT exist!`);
   }

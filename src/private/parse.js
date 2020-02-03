@@ -137,7 +137,7 @@ function _replaceImport(line, packets, fifo, parent, rpath, ims) {
       // absolute path. If the path starts with './', we consider it refers
       // to a project module, otherwise it refers to a node module.
       let f;
-      if (s.match(/^.\//)) {
+      if (s.match(/(^.\/)|(^..\/)/)) {
         f = path.resolve(path.dirname(parent), s);
       } else {
         f = getFromNodeModule(rpath, s);
@@ -193,7 +193,7 @@ function _parse(fifo, buffer, packets, rpath, callback) {
   buffer += `\x20\x20${_getIndex(packets, input)}: `;
   const lib = `./${path.relative(rpath, input)}`.replace('./node_modules/', '');
   buffer += `['${lib}', `;
-  buffer += 'function(impoort, module) {\n';
+  buffer += 'function(impoort, module, exports) {\n';
 
   bufferStream.end(Buffer.from(fs.readFileSync(`${input}.js`)));
   const rl = readline.createInterface({
