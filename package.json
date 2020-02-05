@@ -1,12 +1,19 @@
 {
   "name": "pakket",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.1",
   "description": "A bundler for Javascript code relying on import and export",
   "main": "index.js",
   "bin": {
     "pakket": "./bin/pakket.js"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "node ./test/build.js",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov mocha ./test/main.js",
+    "display-coverage": "opener ./coverage/lcov-report/index.html",
+    "check-coverage": "nyc check-coverage --statements 50 --branches 25 --functions 50 --lines 50",
+    "report-coverage": "nyc report --reporter=text-lcov | coveralls",
+    "report": "nyc report"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jclo/pakket.git"
@@ -28,9 +35,15 @@
     "vinyl": "^2.2.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.9",
+    "cross-env": "^7.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.1"
+    "eslint-plugin-import": "^2.20.1",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "opener": "^1.5.1"
   },
   "publishConfig": {
     "access": "public"
@@ -38,7 +51,7 @@
   "private": false,
   "husky": {
     "hooks": {
-      "pre-commit": ""
+      "pre-commit": "npm run build && npm run test && npm run check-coverage && npm run report"
     }
   }
 }

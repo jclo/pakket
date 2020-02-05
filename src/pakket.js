@@ -88,16 +88,21 @@ methods = {
   /**
    * Prints the generated UMD module to stdout.
    *
-   * @method ()
+   * @method (arg1, arg2)
    * @private
-   * @param {}              -,
+   * @param {Boolean}       dump to stdout or return to callback,
+   * @param {Function}      function to call at the completion if stdout is false,
    * @returns {}            -,
    * @since 0.0.0
    */
-  _dump() {
+  _dump(stdout, callback) {
     this.get((data) => {
       data += Debug.add(this.packets);
-      process.stdout.write(`${data}\n`);
+      if (stdout) {
+        process.stdout.write(`${data}\n`);
+      } else {
+        callback(data);
+      }
     });
   },
 

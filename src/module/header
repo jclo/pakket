@@ -1,4 +1,5 @@
 /* global define */
+/* eslint no-shadow: ['error', { 'allow': ['root'] }] */
 /* eslint strict: ["error", "function"] */
 (function(root, factory) {
   'use strict';
