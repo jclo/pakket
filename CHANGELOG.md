@@ -3,6 +3,8 @@
 ### 0.0.1 (February 5, 2020)
 
   * Initiated a test procedure for the project,
+  * Added the package husky,
+  * Added the test file as Travis CI could not generate it!
   * ...,
 
 
