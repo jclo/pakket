@@ -6,7 +6,7 @@
   * Added the package husky,
   * Added the test file as Travis CI could not generate it!
   * Updated the dependencies,
-  * ...,
+  * Release.
 
 
 ### 0.0.0 (February 3, 2020)
