@@ -5,6 +5,7 @@
   * Initiated a test procedure for the project,
   * Added the package husky,
   * Added the test file as Travis CI could not generate it!
+  * Updated the dependencies,
   * ...,
 
 
