@@ -48,6 +48,7 @@ const lib = 'Pakket'
       build: [Boolean, false],
       name: [String, null],
       export: [String, null],
+      type: [String, null],
       output: [String, null],
     }
     , shortOpts = {
@@ -55,6 +56,7 @@ const lib = 'Pakket'
       v: ['--version', version],
       n: ['--name'],
       e: ['--export'],
+      t: ['--type'],
       o: ['--output'],
     }
     , parsed = nopt(opts, shortOpts, process.argv, 2)
@@ -85,6 +87,7 @@ function _help() {
     '-v, --version       output the version number',
     '-n, --name          the name of the app',
     '-e, --export        the name to be exported',
+    '-t, --type          the generated output "umd" or "es6"',
     '-o  --output        the output file',
     '',
   ].join('\n');
@@ -113,7 +116,18 @@ function _build(options) {
     pakket._get((data) => {
       fs.writeFile(options.output, data, (err) => {
         if (err) throw err;
-        process.stdout.write(`The UMD module is saved in ${options.output}\n`);
+        switch (options.type) {
+          case 'generic':
+            process.stdout.write(`The generic module is saved in ${options.output}\n`);
+            break;
+
+          case 'es6':
+            process.stdout.write(`The ES6 module is saved in ${options.output}\n`);
+            break;
+
+          default:
+            process.stdout.write(`The UMD module is saved in ${options.output}\n`);
+        }
       });
     });
   } else {

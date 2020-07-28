@@ -9,7 +9,7 @@
 <!--- [![node version][node-image]][node-url] -->
 [![NPM install][npm-install-image]][npm-install-url]
 
-`Pakket` is a tool that let you bundle your ES6 Javascript code inside an UMD module that runs in the browser. Pakket is similar to Browserify but it is intended for Javascript code relying on the keywords `import` and `export`.
+`Pakket` is a tool that let you bundle your ES6 Javascript code inside an UMD or ES6 module that runs in the browser. Pakket is similar to Browserify but it is intended for Javascript code relying on the keywords `import` and `export`.
 
 Thus, with `Pakket`, you can split your ES6 Javascript code into multiple files by using the keywords `import` and `export`. You can then bundle them without requiring a compiler to replace `import` and `export`.
 
@@ -34,7 +34,7 @@ Then, bundle it.
 ### From a command line
 
 ```bash
-./node_modules/.bin/pakket build --name './src/main.js' --export 'MyBundle' --outpout '/dist/bundle.js'
+./node_modules/.bin/pakket build --name './src/main.js' --export 'MyBundle' --type 'umd' --outpout '/dist/bundle.js'
 ```
 
 ### From a Javascript script
@@ -42,7 +42,10 @@ Then, bundle it.
 ```javascript
 const Pakket = require('pakket');
 
-const pakket = Pakket('./src/main.js', { export: 'MyBundle' });
+// By default, the generated output is an UMD module.
+// If you want to generate an ES6 module, you have
+// to specify 'es6' as the type.
+const pakket = Pakket('./src/main.js', { export: 'MyBundle', type: 'umd' });
 
 pakket.get((data) => {
   fs.writeFile('./dist/bundle.js', data, 'utf8', (err) => {
@@ -57,7 +60,10 @@ pakket.get((data) => {
 ```javascript
 const Pakket = require('pakket');
 
-const pakket = Pakket('./src/main.js', { export: 'MyBundle' });
+// By default, the generated output is an UMD module.
+// If you want to generate an ES6 module, you have
+// to specify 'es6' as the type.
+const pakket = Pakket('./src/main.js', { export: 'MyBundle', type: 'umd' });
 
 function build() {
   return pakket.bundle()
@@ -66,6 +72,9 @@ function build() {
   ;
 }
 ```
+
+[ES6Pakket](https://www.npmjs.com/package/@mobilabs/es6pakket) is a boilerplate that allows you writing libraries that rely on `Pakket`.
+
 
 ## License
 
