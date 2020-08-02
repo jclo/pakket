@@ -8,6 +8,7 @@
   * Added the option to create an ES6 module,
   * Second release candidate,
   * Made a few minor changes,
+  * Third release candidate,
   * ...,
 
 
