@@ -10,6 +10,7 @@
   * Made a few minor changes,
   * Third release candidate,
   * Updated the project dependencies,
+  * Fourth release candidate,
   * ...,
 
 
