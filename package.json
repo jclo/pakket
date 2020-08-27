@@ -1,6 +1,6 @@
 {
   "name": "pakket",
-  "version": "0.0.2-beta.5",
+  "version": "1.0.0",
   "description": "A bundler for Javascript code relying on import and export",
   "main": "index.js",
   "bin": {
@@ -31,7 +31,7 @@
   "homepage": "https://github.com/jclo/pakket",
   "dependencies": {
     "nopt": "^5.0.0",
-    "terser": "^5.2.0",
+    "terser": "^5.2.1",
     "vinyl": "^2.2.0"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "husky": "^4.2.5",
-    "mocha": "^8.1.1",
+    "mocha": "^8.1.2",
     "nyc": "^15.1.0",
     "opener": "^1.5.1"
   },
