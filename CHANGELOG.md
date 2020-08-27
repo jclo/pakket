@@ -14,7 +14,7 @@
   * Updated the project dependencies,
   * Fifth release candidate,
   * Updated the project dependencies,
-  * ...,
+  * Release.
 
 
 ### 0.0.1 (February 5, 2020)
