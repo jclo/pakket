@@ -1,6 +1,6 @@
 {
   "name": "pakket",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A bundler for Javascript code relying on import and export",
   "main": "index.js",
   "bin": {
@@ -12,7 +12,8 @@
     "display-coverage": "opener ./coverage/lcov-report/index.html",
     "check-coverage": "nyc check-coverage --statements 50 --branches 25 --functions 50 --lines 50",
     "report-coverage": "nyc report --reporter=text-lcov | coveralls",
-    "report": "nyc report"
+    "report": "nyc report",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -35,24 +36,19 @@
     "vinyl": "^2.2.1"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "coveralls": "^3.1.0",
+    "chai": "^4.3.4",
+    "coveralls": "^3.1.1",
     "cross-env": "^7.0.3",
-    "eslint": "^7.18.0",
+    "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "husky": "^4.3.8",
-    "mocha": "^8.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "husky": "^7.0.1",
+    "mocha": "^9.0.2",
     "nyc": "^15.1.0",
     "opener": "^1.5.2"
   },
   "publishConfig": {
     "access": "public"
   },
-  "private": false,
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build && npm run test && npm run check-coverage && npm run report"
-    }
-  }
+  "private": false
 }

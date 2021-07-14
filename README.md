@@ -94,7 +94,7 @@ function build() {
 [npm-url]: https://www.npmjs.com/package/pakket
 [release-url]: https://github.com/jclo/pakket/tags
 [commit-url]: https://github.com/jclo/pakket/commits/master
-[travis-url]: https://travis-ci.org/jclo/pakket
+[travis-url]: https://travis-ci.com/jclo/pakket
 [coveralls-url]: https://coveralls.io/github/jclo/pakket?branch=master
 [dependencies-url]: https://david-dm.org/jclo/pakket
 [devdependencies-url]: https://david-dm.org/jclo/pakket?type=dev
