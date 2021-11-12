@@ -148,10 +148,18 @@ function _replaceImport(line, packets, fifo, parent, rpath, ims) {
 
       // transform the line: 'import u from './util';'
       // to: 'const u = impoort('./util');'
+      // Nota:
+      // The two last replace could seems a bit too complex but it is
+      // required for files names '$.js'. If you have to convert:
+      //  . 'import x from './$.js'
+      // with 'replace(`'${s}'`, `impoort('${s}')`)', you get:
+      //  . const u = impoort('./;);
+      // It is why you have these two replace for this specific case.
       return line
         .replace('import', 'const')
         .replace('from', '=')
-        .replace(`'${s}'`, `impoort('${s}')`)
+        .replace(`'${s}'`, `impoort("${s}")`)
+        .replace(/"/g, '\'')
       ;
     }
   }
