@@ -1,12 +1,12 @@
 ### HEAD
 
-### 1.0.7 (January 9, 2024)
+### 1.1.0 (January 9, 2024)
 
   * Updated the project dependencies,
   * Replaced nyc by c8 as nyc doesn't work properly with mocha and node v18,
   * Removed Travis-CI,
   * Added Github Actions as CI instead of Travis-CI,
-  * ...,
+  * Release.
 
 
 ### 1.0.7 (May 18, 2023)
