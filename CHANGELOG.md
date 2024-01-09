@@ -1,5 +1,12 @@
 ### HEAD
 
+### 1.0.7 (January 9, 2024)
+
+  * Updated the project dependencies,
+  * Replaced nyc by c8 as nyc doesn't work properly with mocha and node v18,
+  * ...,
+
+
 ### 1.0.7 (May 18, 2023)
 
   * Updated the project dependencies,
