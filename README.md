@@ -2,12 +2,9 @@
 
 [![NPM version][npm-image]][npm-url]
 [![GitHub last commit][commit-image]][commit-url]
-[![Travis CI][travis-image]][travis-url]
+[![Github workflow][ci-image]][ci-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 [![License][license-image]](LICENSE.md)
-
-<!-- [![Dependencies status][dependencies-image]][dependencies-url]
-[![Dev Dependencies status][devdependencies-image]][devdependencies-url] -->
 
 `Pakket` is a tool that let you bundle your ES6 Javascript code inside an UMD or ES6 module that runs in the browser. Pakket is similar to Browserify but it is intended for Javascript code relying on the keywords `import` and `export`.
 
@@ -85,7 +82,7 @@ function build() {
 [npm-image]: https://img.shields.io/npm/v/pakket.svg?logo=npm&logoColor=fff&label=NPM+package
 [release-image]: https://img.shields.io/github/release/jclo/pakket.svg?include_prereleases
 [commit-image]: https://img.shields.io/github/last-commit/jclo/pakket.svg?logo=github
-[travis-image]: https://img.shields.io/travis/com/jclo/pakket.svg?logo=travis-ci&logoColor=fff
+[ci-image]: https://github.com/jclo/es6lib/actions/workflows/ci.yml/badge.svg
 [coveralls-image]: https://img.shields.io/coveralls/jclo/pakket/master.svg?&logo=coveralls
 [dependencies-image]: https://david-dm.org/jclo/pakket/status.svg?theme=shields.io
 [devdependencies-image]: https://david-dm.org/jclo/pakket/dev-status.svg?theme=shields.io
@@ -95,7 +92,7 @@ function build() {
 [npm-url]: https://www.npmjs.com/package/pakket
 [release-url]: https://github.com/jclo/pakket/tags
 [commit-url]: https://github.com/jclo/pakket/commits/master
-[travis-url]: https://app.travis-ci.com/jclo/pakket?branch=main
+[ci-url]: https://github.com/jclo/es6lib/actions/workflows/ci.yml
 [coveralls-url]: https://coveralls.io/github/jclo/pakket?branch=master
 [dependencies-url]: https://david-dm.org/jclo/pakket
 [devdependencies-url]: https://david-dm.org/jclo/pakket?type=dev
