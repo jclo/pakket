@@ -203,7 +203,12 @@ function _parse(fifo, buffer, packets, rpath, callback) {
   buffer += `['${lib}', `;
   buffer += 'function(impoort, module, exports) {\n';
 
-  bufferStream.end(Buffer.from(fs.readFileSync(`${input}.js`)));
+  // bufferStream.end(Buffer.from(fs.readFileSync(`${input}.js`)));
+  if (input.endsWith('.js')) {
+    bufferStream.end(Buffer.from(fs.readFileSync(input)));
+  } else {
+    bufferStream.end(Buffer.from(fs.readFileSync(`${input}.js`)));
+  }
   const rl = readline.createInterface({
     input: bufferStream,
     crlfDelay: Infinity,

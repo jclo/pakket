@@ -1,6 +1,6 @@
 {
   "name": "pakket",
-  "version": "1.1.0",
+  "version": "1.1.1-alpha.1",
   "description": "A bundler for Javascript code relying on import and export",
   "main": "index.js",
   "bin": {
