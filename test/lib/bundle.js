@@ -5,7 +5,7 @@
 (function(root, factory) {
   'use strict';
 
-  /* istanbul ignore next */
+  /* c8 ignore start */
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define([''], factory);
@@ -20,6 +20,7 @@
     /* eslint-disable-next-line no-param-reassign */
     root.AAA = factory(root);
   }
+  /* c8 ignore stop */
 /* eslint-disable-next-line */
 }(this,(root)=>{"use strict";return function(){/* istanbul ignore next */function e(t,n,o){function r(f){function i(e){const n=t[f][2][e];return r(n||e)}if(!n[f]){if(!t[f]){throw new Error(`Cannot find module "${f}"`)}n[f]={exports:{}};const r=n[f];t[f][1].call(r.exports,i,r,r.exports,e,t,n,o)}return n[f].exports}for(let e=0;e<o.length;e++){r(o[e])}return r}return e}()({
 
